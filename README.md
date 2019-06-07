@@ -1,11 +1,30 @@
 # Bem vindo ao desafio DevOps da Engineering do Brasil.
 
-Neste desafio queremos validar seus conhecimentos em Docker, para tanto temos uma app em Python3 é um simples Hello World. Esperamos que ao final você nos gere uma imagem Docker contendo o código dessa app funcional.
+Resolução do teste DevOps proposto.
 
-Primeiro faça um fork desse projeto, commit todas suas mudanças e nos envie o link do seu fork, para avaliação.
+## Requisitos 
+Para rodar o projeto, deve ter as seguintes ferramentas instalados: 
 
-## Entregáveis:
-Como entregáveis esperamos um arquivo Dockerfile e um README.md explicando como gerar sua imagem e como rodar um container usando sua imagem.
+* Docker
+* docker-compose
 
-## Você ganha pontos extras se:
-Criar um arquivo de deploy dessa aplicação como o docker-compose, mas pode ser também para Kubernetes ou Swarm. Se fizer um script que execute e a imagem seja criada e o container criado.
+## Como executar o projeto
+No repositorio encontra-se scripts de execução, pode ser executado de duas formas.
+A primeira simplente usa o comando docker passando os paramentros para rodar o container.
+1. exec-container.sh - Gerar image e rodar o container com o docker.
+
+Como executar: $   ./exec-container.sh ou $ sh exec-container.sh 
+
+* Lista container em execução
+$ docker ps
+
+* Matando o container
+$ docker kill [id-do-container]
+
+
+Nesse script rodar o container via receita do docker-compose.
+2. exec-compose.sh - Gera a image e roda container via compose 
+Como executar:  $  ./exec-container.sh ou $ sh exec-container.sh
+
+* Finalizando a execução
+  $ docker-compose down
